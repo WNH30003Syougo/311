@@ -6,15 +6,19 @@ TagManager:
   tags:
   - Enemy
   - playerAttack
+  - kyoten
+  - Attack
+  - Base
+  - Testunit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
-  - 
+  - Torus
+  - Block
   - 
   - 
   - 
