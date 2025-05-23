@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         Kiti = GameObject.Find("Sphere");
         Keiro = GameObject.Find("Cylinder");
         //ŽžŠÔŠÔŠu‚ðŒˆ’è‚·‚é
-        interval = 2f;
+        interval = 5f;
     }
 
     // Update is called once per frame
