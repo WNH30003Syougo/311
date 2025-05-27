@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1c5b1db1846362d4d92c2dd38c425fa7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - skyMaterial: {fileID: 2100000, guid: b8fb0c1c0a30bb041b06ab5ea6092d64, type: 2}
+  - skyTexture: {fileID: 2800000, guid: b8e1678fd275fc84f9030180af3b52c9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

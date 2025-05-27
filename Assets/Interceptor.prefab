@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5507212541933650177
 Transform:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d8d287ceb1cd24caaa597ebf88163f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 170
+  attackRadius: 130
   attackInterval: 1
   attackPower: 10
   projectilePrefab: {fileID: 7107344483752302807, guid: 46ce490d13423284fa0f727661f88ab8, type: 3}

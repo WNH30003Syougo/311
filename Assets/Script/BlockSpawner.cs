@@ -114,26 +114,6 @@ public class BlockSpawner : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             placedBlock.transform.Rotate(Vector3.down * rotationSpeed * Time.deltaTime);
     }
-    //void MoveBlockOnTorus()
-    //{
-    //    if (currentTorus == null) return;
-
-    //    float deltaTheta = 0f;
-
-    //    if (Input.GetKey(KeyCode.LeftArrow)) deltaTheta -= 1f;
-    //    if (Input.GetKey(KeyCode.RightArrow)) deltaTheta += 1f;
-
-    //    if (deltaTheta != 0f)
-    //    {
-    //        angleTheta += deltaTheta * moveSpeed * Time.deltaTime;
-    //        Vector3 newPos = CalculateTorusPosition(angleTheta, anglePhi);
-    //        placedBlock.transform.position = newPos;
-
-    //        /* Vector3 axis = currentTorus.up * Mathf.Sign(deltaTheta);
-    //         float angle = moveSpeed * Time.deltaTime;
-    //         currentTorus.Rotate(axis, angle, Space.World);*/
-    //    }
-    //}
     void MoveBlockOnTorus()// トーラス表面に沿ってブロックを移動する処理（←→キーで操作）
     {
         if (placedBlock == null || currentTorus == null) return;
@@ -157,7 +137,7 @@ public class BlockSpawner : MonoBehaviour
         if (moved)
         {
             Vector3 axis = Vector3.zero;
-            //float angle = moveSpeed * Time.deltaTime;
+            float angle = moveSpeed * Time.deltaTime;
 
             if (deltaTheta != 0f)
             {
@@ -178,7 +158,29 @@ public class BlockSpawner : MonoBehaviour
                 axis = Vector3.Cross(worldNormal, Vector3.up).normalized * Mathf.Sign(deltaPhi);
             }
             // トーラスをワールド空間で回転
-            //currentTorus.Rotate(axis, angle, Space.World);
+            currentTorus.Rotate(axis, angle, Space.World);
         }
     }
 }
+
+
+//void MoveBlockOnTorus()
+//{
+//    if (currentTorus == null) return;
+
+//    float deltaTheta = 0f;
+
+//    if (Input.GetKey(KeyCode.LeftArrow)) deltaTheta -= 1f;
+//    if (Input.GetKey(KeyCode.RightArrow)) deltaTheta += 1f;
+
+//    if (deltaTheta != 0f)
+//    {
+//        angleTheta += deltaTheta * moveSpeed * Time.deltaTime;
+//        Vector3 newPos = CalculateTorusPosition(angleTheta, anglePhi);
+//        placedBlock.transform.position = newPos;
+
+//        /* Vector3 axis = currentTorus.up * Mathf.Sign(deltaTheta);
+//         float angle = moveSpeed * Time.deltaTime;
+//         currentTorus.Rotate(axis, angle, Space.World);*/
+//    }
+//}

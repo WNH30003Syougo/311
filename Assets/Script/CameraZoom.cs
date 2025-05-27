@@ -32,13 +32,25 @@ public class CameraZoom : MonoBehaviour
 
         // ホイールの入力を取得
         float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll != 0f)
+        {
+            Debug.Log("スクロール入力あり: " + scroll);
+            // 距離を更新（ズームイン：正、ズームアウト：負）
+            currentDistance -= scroll * zoomSpeed;
+            currentDistance = Mathf.Clamp(currentDistance, minDistance, maxDistance);
 
-        // 距離を更新（ズームイン：正、ズームアウト：負）
-        currentDistance -= scroll * zoomSpeed;
-        currentDistance = Mathf.Clamp(currentDistance, minDistance, maxDistance);
+            Vector3 direction = (transform.position - target.position).normalized;
 
-        // ターゲットから一定距離の位置にカメラを配置
-        transform.position = target.position - transform.forward * currentDistance;
+            // カメラがターゲットを向く
+            transform.LookAt(target);
+
+            // ターゲットから一定距離の位置にカメラを配置
+            //transform.position = target.position - transform.forward * currentDistance;
+            transform.position = target.position + direction * currentDistance;
+            transform.LookAt(target);
+
+        }
+
 
     }
 }

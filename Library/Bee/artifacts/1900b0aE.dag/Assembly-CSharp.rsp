@@ -347,9 +347,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Script/ApplySkyTexture.cs"
 "Assets/Script/Attack.cs"
+"Assets/Script/Billboard.cs"
 "Assets/Script/BlockSpawner.cs"
 "Assets/Script/CameraOrbit.cs"
+"Assets/Script/CameraOrbitZoom.cs"
 "Assets/Script/CameraZoom.cs"
 "Assets/Script/CubeRotate.cs"
 "Assets/Script/Enemy.cs"
@@ -357,8 +360,10 @@
 "Assets/Script/hpReduce.cs"
 "Assets/Script/KyotenHealth.cs"
 "Assets/Script/Life_Children.cs"
+"Assets/Script/ObjectSelector.cs"
 "Assets/Script/Point.cs"
 "Assets/Script/Projectile.cs"
+"Assets/Script/SelectableHighlighter.cs"
 "Assets/Script/TestUnitHealth.cs"
 -langversion:9.0
 /deterministic
